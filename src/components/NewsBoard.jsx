@@ -17,7 +17,7 @@ const NewsBoard = ({category}) => {
 
     return (
         <div>
-            <h2 className='text-center'>Latest <span className='badge bg-danger'>News</span></h2>
+            <h2 className='text-center'>Latest <span className='badge bg-danger'>News</span> <span>{category != 'general' ? `on ${category.charAt(0).toUpperCase() + category.slice(1)}` : ""} </span></h2>
             {articles.map((article, index) => {
                 return(
                     <NewsItem
